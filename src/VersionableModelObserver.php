@@ -25,7 +25,11 @@ class VersionableModelObserver
      */
     public static function disableVersionableFor($model)
     {
-        static::$versionableDisabledFor[get_class($model)] = true;
+        if (is_object($model)) {
+            $model = get_class($model);
+        }
+
+        static::$versionableDisabledFor[$model] = true;
     }
 
     /**
@@ -36,7 +40,11 @@ class VersionableModelObserver
      */
     public static function enableVersionableFor($model)
     {
-        unset(static::$versionableDisabledFor[get_class($model)]);
+        if (is_object($model)) {
+            $model = get_class($model);
+        }
+
+        unset(static::$versionableDisabledFor[$model]);
     }
 
     /**
@@ -47,7 +55,11 @@ class VersionableModelObserver
      */
     public static function versionableDisabledFor($model)
     {
-        return isset(static::$versionableDisabledFor[get_class($model)]);
+        if (is_object($model)) {
+            $model = get_class($model);
+        }
+
+        return isset(static::$versionableDisabledFor[$model]);
     }
 
     /**

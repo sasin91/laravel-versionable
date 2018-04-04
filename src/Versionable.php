@@ -64,7 +64,7 @@ trait Versionable
      */
     public static function enableVersioning()
     {
-        VersioningModelObserver::enableVersionableFor(get_called_class());
+        VersionableModelObserver::enableVersionableFor(get_called_class());
     }
 
     /**
@@ -72,7 +72,7 @@ trait Versionable
      */
     public static function disableVersioning()
     {
-        VersioningModelObserver::disableVersionableFor(get_called_class());
+        VersionableModelObserver::disableVersionableFor(get_called_class());
     }
 
     /**
