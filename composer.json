@@ -1,0 +1,43 @@
+{
+    "name": "sasin91/laravel-versionable",
+    "description": "Enables versioning of Eloquent models.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonas kervin Hansen",
+            "email": "jonas.kerwin.hansen@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^5.6",
+        "illuminate/database": "^5.6"
+    },
+    "require-dev": {
+        "orchestra/database": "^3.6",
+        "orchestra/testbench": "^3.6",
+        "phpunit/phpunit": "^7.0",
+        "mockery/mockery": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sasin91\\LaravelVersionable\\": "src/",
+            "Sasin91\\LaravelVersionable\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sasin91\\LaravelVersionable\\VersionableServiceProvider"
+            ]
+        }
+    }
+}
