@@ -2,7 +2,7 @@
 
 namespace Sasin91\LaravelVersionable\Tests;
 
-include(__DIR__.'/../migrations/create_versions_table.php');
+include(__DIR__.'/../migrations/2018_04_04_123456_create_versions_table.php');
 
 use CreateVersionsTable;
 use Orchestra\Testbench\TestCase as TestBench;
