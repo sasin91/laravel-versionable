@@ -16,6 +16,8 @@ class VersionableServiceProvider extends ServiceProvider
                 __DIR__.'/../config/versionable.php' => config_path('versionable.php'),
             ], 'config');
         }
+
+        $this->loadMigrationsFrom(__DIR__.'/migrations');
     }
 
     /**
