@@ -17,7 +17,7 @@ class VersionableServiceProvider extends ServiceProvider
             ], 'config');
         }
 
-        $this->loadMigrationsFrom(__DIR__.'/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../migrations');
     }
 
     /**
